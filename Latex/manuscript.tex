@@ -1,0 +1,192 @@
+%% 
+%% Copyright 2007-2020 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times,authoryear]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+ \usepackage[hidelinks]{hyperref} % Citações (ativação)
+        \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=magenta,urlcolor=blue} % Citações (colorlinks=true, citecolor=blue)
+        \usepackage{booktabs} % Tabelas (Estilho das bordas: toprule, midrule, bottomrule)
+        \usepackage{multirow} % Tabelas (Ajuste vertical em células mescladas) 
+        \usepackage{caption} % Tabelas e Figuras (Alinhamento horizontal dos Títulos) 
+        \captionsetup{singlelinecheck=false, labelsep=period, labelfont={bf}, font=footnotesize} % Tabelas e Figuras (Alinhamento horizontal dos Títulos)
+   
+        \usepackage[brazil]{babel}
+\journal{XXXXXXXXX}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \affiliation for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%            addressline={}, 
+%%            city={},
+%%            postcode={}, 
+%%            state={},
+%%            country={}}
+%% \fntext[label3]{}
+
+
+%%Research highlights
+
+\begin{highlights}
+%HK. Elaborar ao final do artigo (em geral, 5 highlights)
+\item Predição de ações usando redes neurais com diferentes funções de ativação
+\end{highlights}
+
+
+\title{Predição de ações usando redes neurais com diferentes funções de ativação}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \affiliation[label1]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%%
+%% \affiliation[label2]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+
+\author[inst1]{Vinicius Ramalho Araujo}
+
+\affiliation[inst1]{organization={Universidade de Brasilia},%Department and Organization
+            addressline={viniciusramalho.93@gmail.com}, 
+            city={Brasilia},
+            postcode={71915-180}, 
+            state={Distrito Federal},
+            country={Brasil}}            
+\begin{abstract}
+%HK. Elaborar somente depois que o artigo estiver bem desenvolvido. 
+Esse artigo busca entender como melhorar a predição do preço de ações usando diferente modelos de ativação de rede neurais recorrentes (CNN) e se a CNN supera a estratégia buy and hold. Para alcançar esse objetivo foi utilizado as funções Sigmoide, que é a função mais utilizada na previsão de series temporais, ReLU, Tangente Hiperbólica e SoftMax, além disso, as funções foram aplicadas em diferentes números de camadas ocultas. Usando 4 ações de setores distintos da bolsa de Nova York do período de 2012 a 2022. Os resultados mostram que existe uma melhora nas predições com a adição de camadas ocultas, a função sigmoide possui o maior acurácia entre as demais funções de ativação estudadas e a estratégia buy and hold não supera a aplicação de CNN com função de ativação Sigmoide.
+\end{abstract}
+
+%%Graphical abstract
+%\begin{graphicalabstract}
+%\includegraphics{grabs}
+%\end{graphicalabstract}
+
+
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+Redes Neurais Recorrente, Função de Ativação, Ações, Mercado de Ações
+
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+%\linenumbers
+
+%% main text
+\section{Introdução}
+\label{sec:introduction}
+
+As redes neurais começaram a ser estudada na década de 40, porém foi em 1958 que Rosenblatt conduziu um trabalho sobre perceptron. No entanto, a teoria foi refutada em 1969 no livro Perceptrons: An Introduciton to Computational Geometry de Minsky trazendo o problema do XOR (ou exclusivo). Isso fez com que as pesquisas fossem desmotivadas por 20 anos, até que na década de 1980 vários eventos trouxeram mais interesse e investimento para o estudo de redes neurais. A partir de 2009 as redes neurais tiveram um grande impulso devido ao advento do big data e do processamento em GPU \cite{macukow2016}
+
+Na última década houve o grande desenvolvimento do big data e isso fez com que as pesquisas voltadas para IA fosse escaladas. Um grande marco, recente, do estudo em IA é o desenvolvimento do GPT-3 que utiliza milhões de neurônios, com centenas de camadas ocultas e 175 bilhões de parâmetros \cite{openia}
+
+Na área financeiro houve um grande avanço nos últimos 20 anos na aplicação em rede neurais. Os temas mais recorrentes nas pesquisas são classificação para risco de crédito, composição de carteira, predição no mercado de ações, entre outros temas \cite{herrmann2022}
+
+Um dos grandes interesses na área de finanças é a previsão de ações. Isso se faz pela grande possibilidade de ganhos no mercado de ações. Existe diferentes métodos para prever ou projetar os valores de ações, entre eles estão método fundamentalista e métodos gráficos. Dessa forma, essas pesquisas buscam avaliar se a arquitetura de LSTM de CNN possui uma melhor função de ativação para prever o modelo de ações e se esse modelo supera o buy and hold.
+
+
+
+\section{Referencial teórico}
+\label{sec:theoretical}
+
+
+
+
+\section{Dados e métodos}
+\label{sec:data}
+
+
+
+\section{Resultados}
+\label{sec:result}
+
+
+\section{Conclusão}
+\label{sec:conclusion}
+
+
+
+
+%
+\bibliographystyle{elsarticle-harv} 
+\bibliography{references}
+
+
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.
